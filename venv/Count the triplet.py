@@ -1,28 +1,20 @@
-a=int(input())
-for i in range(a):
-    count=0
-    b=int(input())
-    arr = list(map(int, input().strip().split()))
+t=int(input())
+for i in range(0,t):
+    n=int(input())
+    arr=list(map(int,input().split()))
     arr.sort()
-    arr_set=set(arr)
-    a=arr[-1]
-    for j in range(b-1):
-        for k in range(j+1, b-1):
-            s=arr[j] + arr[k]
-            if s>a:
+    a=set(arr)
+    b=len(a)
+    c=arr[-1]
+    count=0
+    for i in range(0, b):
+        for j in range(i+1, b):
+            s=arr[i]+arr[j]
+            if s>c:
                 break
-            if s in arr_set:
-                count=count+1
+            if s in a:
+                count+=1
     if count>0:
         print(count)
     else:
         print(-1)
-        # for k in range(j+1, b):
-        #     if arr[j]+arr[k] in arr:
-        #         count=count+1
-
-
-    # if count==0:
-    #     print(-1)
-    # else:
-    #     print(count)
