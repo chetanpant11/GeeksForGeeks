@@ -25,4 +25,5 @@ while(i<j):
             ans1=(j-i+1)*(j-i)//2
             break
         ans+=count2*count1
+print(ans1)
 print(ans+ans1)
